@@ -1,0 +1,34 @@
+{
+	"title": "Java Component Bootstrapper",
+	"language": "java",
+	"description": "A component to Quick Start your Java Aplynk Component",
+	"credentials": {
+		"fields": {
+			"api_key": {
+				"label": "Your api key",
+				"required": true,
+				"viewClass": "TextFieldView"
+			}
+		}
+	},
+	"triggers": {
+		"mockTrigger": {
+			"main": "com.aplynk.bootstrap.triggers.MockTrigger",
+			"type": "polling",
+			"title": "Mock Trigger",
+			"metadata": {
+				"out": "./src/schemas/mockTrigger.out.json"
+			}
+		}
+	},
+	"actions": {
+		"mockAction": {
+			"main": "com.aplynk.bootstrap.actions.MockAction",
+			"title": "Mock Action",
+			"metadata": {
+				"in": "./src/schemas/mockAction.in.json",
+				"out": "./src/schemas/mockAction.out.json"
+			}
+		}
+	}
+}
